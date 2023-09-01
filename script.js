@@ -13,10 +13,13 @@ const getData = async(city) =>{
 }
 
 const showData = (data)=>{
+    row2.style.height = "400px"
+    row2.style.border = "2px solid black"
     row2.innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" height="150px">
 
     <div id="temp">
         ${data.main.temp}&deg;
+        
     </div>
 
     <div id="min_max"> ${data.main.temp_max}&deg; &nbsp; &nbsp; ${data.main.temp_min}&deg; </div>
